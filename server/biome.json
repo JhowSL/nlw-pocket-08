@@ -1,7 +1,28 @@
 {
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
   "organizeImports": {
     "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.next/**"
+    ],
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      }
+    }
   },
   "formatter": {
     "indentStyle": "space",
@@ -17,15 +38,8 @@
       "trailingCommas": "es5"
     }
   },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
   "files": {
-    "ignore": [
-      "node_modules"
-    ]
+    "maxSize": 2000000,
+    "ignore": ["node_modules"]
   }
 }
