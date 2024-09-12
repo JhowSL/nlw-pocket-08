@@ -1,10 +1,12 @@
 {
-  "name": "in.orbit",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "concurrently \"pnpm --prefix server dev\" \"pnpm --prefix web dev\""
-  },
-  "devDependencies": {
-    "concurrently": "^7.0.0"
-  }
+	"name": "in.orbit",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "concurrently \"pnpm --prefix server start\" \"pnpm --prefix web start\"",
+		"dev": "concurrently \"pnpm --prefix server dev\" \"pnpm --prefix web dev\"",
+		"build": "concurrently \"pnpm --prefix server build\" \"pnpm --prefix web build\""
+	},
+	"devDependencies": {
+		"concurrently": "^7.0.0"
+	}
 }
