@@ -1,5 +1,6 @@
 import { X } from 'lucide-react'
-import { radioItems } from '../../utils/utils'
+
+import { radioItems } from '../../utils/utils-create-goals'
 import { Button } from '../ui/button'
 import {
   DialogClose,
