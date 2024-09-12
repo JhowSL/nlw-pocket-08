@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getSummary } from '../hooks/http/get-summary'
+import { getSummary } from '../hooks/http/get/get-summary'
 
 export function CompletedPercentage() {
   const { data } = useQuery({
