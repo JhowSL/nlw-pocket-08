@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "node ./dist/http/server.js",
-		"dev": "tsx watch --env-file .env ./src/http/server.ts",
+		"start": " concurrently \"node ./dist/http/server.js\" \"docker-compose up --build -d\"",
+		"dev": "concurrently \"tsx watch --env-file .env ./src/http/server.ts\"  \"docker-compose up --build -d\"",
 		"build": "dotenv -e .env tsup src",
 		"seed": "tsx --env-file .env ./src/db/seed.ts",
 		"lint": "biome check .",
@@ -22,7 +22,8 @@
 		"drizzle-kit": "0.24.0",
 		"tsup": "8.2.4",
 		"tsx": "4.17.0",
-		"typescript": "5.5.4"
+		"typescript": "5.5.4",
+		"concurrently": "^7.0.0"
 	},
 	"dependencies": {
 		"@fastify/cors": "9.0.1",
